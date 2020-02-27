@@ -1,25 +1,22 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "manifest_version": 2,
+
+  "name": "Mail Notifier",
+  "description": "Addon to Notify Critical Mails",
+  "version": "0.0.1",
+
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Open"
+  },
+  "icons": {
+    "16": "logo192.png",
+    "48": "logo192.png",
+    "128": "logo192.png"
+  },
+  "content_security_policy": "script-src 'self' 'sha256-aRTQ/WfUw0A6U4JBOpenQ51Mziun0flv5Kyk5XgaJnA='; object-src 'self'",
+  "permissions": ["webRequest", "*://developer.mozilla.org/"],
+  "background": {
+    "scripts": ["app/background.js"]
+  }
 }
